@@ -451,6 +451,7 @@
     <Content Include="Views\CoforgeLayout.cshtml" />
     <Content Include="Views\TrnArticleLayout.cshtml" />
     <Content Include="Views\ArticlesLayout.cshtml" />
+    <Content Include="Views\StudentDetailsLayout.cshtml" />
     <None Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
