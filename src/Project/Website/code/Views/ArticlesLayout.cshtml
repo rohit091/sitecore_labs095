@@ -1,0 +1,21 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Articles Layout</title>
+</head>
+<body>
+    <div>
+        @Html.Sitecore().Field("ItemTitle")
+        @Html.Sitecore().Field("ItemDetails")
+        @Html.Sitecore().Field("ItemImage")
+        @Html.Sitecore().Field("ItemDate")
+    </div>
+</body>
+</html>
