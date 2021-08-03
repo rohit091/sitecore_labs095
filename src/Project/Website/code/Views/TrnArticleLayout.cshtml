@@ -1,0 +1,24 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>TrnArticleLayout</title>
+</head>
+<body>
+    <div>
+        @Html.Sitecore().Field("ArticleTitle")
+        @Html.Sitecore().Field("ArticleDescription")
+        @Html.Sitecore().Field("ArticlePublishDate")
+        @Html.Sitecore().Field("ArticleImage")
+        @Html.Sitecore().Field("AuthorName")
+        @Html.Sitecore().Field("AuthorDesignation")
+        @Html.Sitecore().Field("AuthorImage")
+    </div>
+</body>
+</html>
