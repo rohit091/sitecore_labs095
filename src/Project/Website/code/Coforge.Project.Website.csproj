@@ -452,6 +452,8 @@
     <Content Include="Views\TrnArticleLayout.cshtml" />
     <Content Include="Views\ArticlesLayout.cshtml" />
     <Content Include="Views\StudentDetailsLayout.cshtml" />
+    <Content Include="Views\StaffDetailsLayout.cshtml" />
+    <Content Include="Views\StaffSpecializationLayout.cshtml" />
     <None Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
