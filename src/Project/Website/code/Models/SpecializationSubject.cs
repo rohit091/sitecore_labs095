@@ -7,7 +7,7 @@ namespace Coforge.Project.Website.Models
 {
     public class SpecializationSubject
     {
-        public string Title { get; set; }
-        public string Description { get; set; }
+        public HtmlString Title { get; set; }
+        public HtmlString Description { get; set; }
     }
 }

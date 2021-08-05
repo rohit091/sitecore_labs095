@@ -7,10 +7,10 @@ namespace Coforge.Project.Website.Models
 {
     public class StaffDetails
     {
-        public string Name { get; set; }
-        public string Experience { get; set; }
-        public string ProfileDetails { get; set; }
-        public string Photo { get; set; }
-        public string Specialization { get; set; }
+        public HtmlString Name { get; set; }
+        public HtmlString Experience { get; set; }
+        public HtmlString ProfileDetails { get; set; }
+        public HtmlString Photo { get; set; }
+        public HtmlString Specialization { get; set; }
     }
 }

@@ -6,6 +6,7 @@ using System.Web.Mvc;
 //Namespace added! - sidecore + model(to access class)
 using Sitecore;
 using Coforge.Project.Website.Models;
+using Sitecore.Web.UI.WebControls;
 
 namespace Coforge.Project.Website.Controllers
 {
@@ -23,14 +24,14 @@ namespace Coforge.Project.Website.Controllers
 
             //CLASS(Model) OBJECT - REFFERENTIAL DATA TYPE (Non Primitive)
             StudentDatabase studentDB = new StudentDatabase();
-            studentDB.Name = contextItem.Fields["Name"].Value;
-            studentDB.DOB = contextItem.Fields["DOB"].Value;
-            studentDB.Email = contextItem.Fields["Email"].Value;
-            studentDB.PhoneNo = contextItem.Fields["PhoneNo"].Value;
-            studentDB.Profile = contextItem.Fields["Profile"].Value;
-            studentDB.Photograph = contextItem.Fields["Photograph"].Value;
+            studentDB.Name = new HtmlString(FieldRenderer.Render(contextItem, "Name"));
+            studentDB.DOB = new HtmlString(FieldRenderer.Render(contextItem, "DOB"));
+            studentDB.Email = new HtmlString(FieldRenderer.Render(contextItem, "Email"));
+            studentDB.PhoneNo = new HtmlString(FieldRenderer.Render(contextItem, "PhoneNo"));
+            studentDB.Profile = new HtmlString(FieldRenderer.Render(contextItem, "Profile"));
+            studentDB.Photograph = new HtmlString(FieldRenderer.Render(contextItem, "Photograph"));
 
-       
+
             //Return Action(class Object after setting all Properties) to the view
             return View(studentDB);
         }

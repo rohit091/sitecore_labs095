@@ -6,7 +6,7 @@ using System.Web.Mvc;
 //namespace
 using Sitecore;
 using Coforge.Project.Website.Models;
-
+using Sitecore.Web.UI.WebControls;
 
 namespace Coforge.Project.Website.Controllers
 {
@@ -20,11 +20,11 @@ namespace Coforge.Project.Website.Controllers
 
             //Class Object + setting fields
             StaffDetails staffDB = new StaffDetails();
-            staffDB.Photo = contextItem.Fields["Photo"].Value;
-            staffDB.Name = contextItem.Fields["Name"].Value;
-            staffDB.Experience = contextItem.Fields["Experience"].Value;
-            staffDB.ProfileDetails = contextItem.Fields["ProfileDetails"].Value;
-            staffDB.Specialization = contextItem.Fields["Specialization"].Value;
+            staffDB.Photo = new HtmlString(FieldRenderer.Render(contextItem, "Photo"));
+            staffDB.Name = new HtmlString(FieldRenderer.Render(contextItem, "Name"));
+            staffDB.Experience = new HtmlString(FieldRenderer.Render(contextItem, "Experience"));
+            staffDB.ProfileDetails = new HtmlString(FieldRenderer.Render(contextItem, "ProfileDetails"));
+            staffDB.Specialization = new HtmlString(FieldRenderer.Render(contextItem, "Specialization"));
 
 
             //return classObject to View

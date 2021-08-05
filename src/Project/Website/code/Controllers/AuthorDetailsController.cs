@@ -6,6 +6,7 @@ using System.Web.Mvc;
 //namespace
 using Sitecore;
 using Coforge.Project.Website.Models;
+using Sitecore.Web.UI.WebControls;
 
 namespace Coforge.Project.Website.Controllers
 {
@@ -19,9 +20,9 @@ namespace Coforge.Project.Website.Controllers
 
             //class Object
             AuthorDetails authDetails = new AuthorDetails();
-            authDetails.AuthorName = contextItem.Fields["AuthorName"].Value;
-            authDetails.AuthorImage = contextItem.Fields["AuthorImage"].Value;
-            authDetails.AuthorDesignation = contextItem.Fields["AuthorDesignation"].Value;
+            authDetails.AuthorName = new HtmlString(FieldRenderer.Render(contextItem, "AuthorName"));
+            authDetails.AuthorImage = new HtmlString(FieldRenderer.Render(contextItem, "AuthorImage"));
+            authDetails.AuthorDesignation = new HtmlString(FieldRenderer.Render(contextItem, "AuthorDesignation"));
 
             //return object to View
             return View(authDetails);

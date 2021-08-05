@@ -6,6 +6,7 @@ using System.Web.Mvc;
 //namespace
 using Sitecore;
 using Coforge.Project.Website.Models;
+using Sitecore.Web.UI.WebControls;
 
 namespace Coforge.Project.Website.Controllers
 {
@@ -19,8 +20,8 @@ namespace Coforge.Project.Website.Controllers
 
             //Class Object to set properties
             SpecializationSubject subjectDetails = new SpecializationSubject();
-            subjectDetails.Title = contextItem.Fields["Title"].Value;
-            subjectDetails.Description = contextItem.Fields["Description"].Value;
+            subjectDetails.Title = new HtmlString(FieldRenderer.Render(contextItem, "Title"));
+            subjectDetails.Description = new HtmlString(FieldRenderer.Render(contextItem, "Description"));
 
             //return classObject to views
             return View(subjectDetails);

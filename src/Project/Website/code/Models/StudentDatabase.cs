@@ -9,12 +9,12 @@ namespace Coforge.Project.Website.Models
     {   
         //public dataType variableFieldName {get;set;}
         //variableFieldName - from _standardValues of template
-        public string Name  { get; set; }
-        public string DOB { get; set; }
-        public string PhoneNo { get; set; }
-        public string Email { get; set; }
-        public string MyProperty { get; set; }
-        public string Profile { get; set; }
-        public string Photograph { get; set; }
+        public HtmlString Name  { get; set; }
+        public HtmlString DOB { get; set; }
+        public HtmlString PhoneNo { get; set; }
+        public HtmlString Email { get; set; }
+        public HtmlString MyProperty { get; set; }
+        public HtmlString Profile { get; set; }
+        public HtmlString Photograph { get; set; }
     }
 }

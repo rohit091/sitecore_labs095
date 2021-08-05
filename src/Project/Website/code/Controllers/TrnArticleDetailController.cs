@@ -1,13 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Web;
+using System.Web; //for HtmlString
 using System.Web.Mvc;
 //Article class
 using Coforge.Project.Website.Models;
 //nameSpace
 using Sitecore;
-
+using Sitecore.Web.UI.WebControls;
 
 namespace Coforge.Project.Website.Controllers
 {
@@ -26,11 +26,12 @@ namespace Coforge.Project.Website.Controllers
             
             //Reference Variable - Populating the ContextItem
             //creating object for class ArticleDetail - calls default constructor
+            //FieldRendrer(contextItem,fieldName) - returns String  
             ArticleDetail articleDetail = new ArticleDetail();
-            articleDetail.ArticleTitle = contextItem.Fields["ArticleTitle"].Value;
-            articleDetail.ArticleDescription = contextItem.Fields["ArticleDescription"].Value;
-            articleDetail.ArticlePublishDate = contextItem.Fields["ArticlePublishDate"].Value;
-            articleDetail.ArticleImage = contextItem.Fields["ArticleImage"].Value;
+            articleDetail.ArticleTitle =  new HtmlString(FieldRenderer.Render(contextItem,"ArticleTitle"));
+            articleDetail.ArticleDescription = new HtmlString(FieldRenderer.Render(contextItem,"ArticleDescription"));
+            articleDetail.ArticlePublishDate = new HtmlString(FieldRenderer.Render(contextItem,"ArticlePublishDate"));
+            articleDetail.ArticleImage = new HtmlString(FieldRenderer.Render(contextItem,"ArticleImage"));
 
 
             //return this object of ArticelDetail class -> View
