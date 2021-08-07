@@ -1,0 +1,12 @@
+﻿
+@model  IEnumerable<Coforge.Project.Website.Models.NavigationItem>
+
+<nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+        @foreach (var navItem in Model){
+            <li class="breadcrumb-item">
+                <a href="@navItem.NavItemUrl">@navItem.NavItemName</a>
+            </li>
+         }
+    </ol>
+</nav>

@@ -462,6 +462,7 @@
     <Content Include="Views\AuthorDetails\Index.cshtml" />
     <Content Include="App_Config\Include\Project\Website\iim.SiteDefinition.config" />
     <Content Include="App_Config\Include\Project\Website\iit.SiteDefinition.config" />
+    <Content Include="Views\TrnBreadcrumb\Index.cshtml" />
     <None Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -470,8 +471,10 @@
     <Compile Include="Controllers\StaffDetailsController.cs" />
     <Compile Include="Controllers\StudentDatabaseController.cs" />
     <Compile Include="Controllers\TrnArticleDetailController.cs" />
+    <Compile Include="Controllers\TrnBreadcrumbController.cs" />
     <Compile Include="Models\ArticleDetail.cs" />
     <Compile Include="Models\AuthorDetails.cs" />
+    <Compile Include="Models\NavigationItem.cs" />
     <Compile Include="Models\SpecializationSubject.cs" />
     <Compile Include="Models\StaffDetails.cs" />
     <Compile Include="Models\StudentDatabase.cs" />
