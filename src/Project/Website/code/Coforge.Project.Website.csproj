@@ -460,6 +460,8 @@
     <Content Include="Views\StaffDetails\Index.cshtml" />
     <Content Include="Views\SpecializationSubject\Index.cshtml" />
     <Content Include="Views\AuthorDetails\Index.cshtml" />
+    <Content Include="App_Config\Include\Project\Website\iim.SiteDefinition.config" />
+    <Content Include="App_Config\Include\Project\Website\iit.SiteDefinition.config" />
     <None Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
