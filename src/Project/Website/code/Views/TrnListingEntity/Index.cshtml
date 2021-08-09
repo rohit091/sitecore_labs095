@@ -1,0 +1,12 @@
+﻿@model IEnumerable<Coforge.Project.Website.Models.EntityCard>
+
+<div>
+    @foreach (var entityItem in Model)
+    {
+        <a href="@entityItem.EntityUrl">
+            <div>@entityItem.EntityName</div>
+        </a>
+        
+        <div>@entityItem.EntityBrief</div>
+    }
+</div>

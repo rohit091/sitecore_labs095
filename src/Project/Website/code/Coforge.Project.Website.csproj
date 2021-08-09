@@ -464,6 +464,7 @@
     <Content Include="App_Config\Include\Project\Website\iit.SiteDefinition.config" />
     <Content Include="Views\TrnBreadcrumb\Index.cshtml" />
     <Content Include="Views\TrnListing\Index.cshtml" />
+    <Content Include="Views\TrnListingEntity\Index.cshtml" />
     <None Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -474,8 +475,10 @@
     <Compile Include="Controllers\TrnArticleDetailController.cs" />
     <Compile Include="Controllers\TrnBreadcrumbController.cs" />
     <Compile Include="Controllers\TrnListingController.cs" />
+    <Compile Include="Controllers\TrnListingEntityController.cs" />
     <Compile Include="Models\ArticleDetail.cs" />
     <Compile Include="Models\AuthorDetails.cs" />
+    <Compile Include="Models\EntityCard.cs" />
     <Compile Include="Models\ListingCard.cs" />
     <Compile Include="Models\NavigationItem.cs" />
     <Compile Include="Models\SpecializationSubject.cs" />
