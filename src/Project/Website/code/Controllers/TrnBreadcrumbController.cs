@@ -33,13 +33,15 @@ namespace Coforge.Project.Website.Controllers
             //LINQ - Reduces the line of code in C#
             //Select = LINQ Projection Operation(sitecore -> navigation method)
             //concat this array with new Item[] having only currentItem (contextItem)
+            //url = itemName
+            //breadcrumb = displayName
             List<NavigationItem> ancestorItem = contextItem.Axes
                                           .GetAncestors()
                                           .Where(x => x.Axes.IsDescendantOf(startItem))
                                           .Concat(new Item[] { contextItem})
                                           .Select(x => new NavigationItem
                                           {
-                                              NavItemName = x.Name,
+                                              NavItemName = x.Fields["__Display name"].Value == "" ? x.Name : x.Fields["__Display name"].Value,
                                               NavItemUrl = LinkManager.GetItemUrl(x)
                                           }).ToList();
 
