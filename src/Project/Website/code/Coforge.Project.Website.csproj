@@ -463,6 +463,7 @@
     <Content Include="App_Config\Include\Project\Website\iim.SiteDefinition.config" />
     <Content Include="App_Config\Include\Project\Website\iit.SiteDefinition.config" />
     <Content Include="Views\TrnBreadcrumb\Index.cshtml" />
+    <Content Include="Views\TrnListing\Index.cshtml" />
     <None Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -472,8 +473,10 @@
     <Compile Include="Controllers\StudentDatabaseController.cs" />
     <Compile Include="Controllers\TrnArticleDetailController.cs" />
     <Compile Include="Controllers\TrnBreadcrumbController.cs" />
+    <Compile Include="Controllers\TrnListingController.cs" />
     <Compile Include="Models\ArticleDetail.cs" />
     <Compile Include="Models\AuthorDetails.cs" />
+    <Compile Include="Models\ListingCard.cs" />
     <Compile Include="Models\NavigationItem.cs" />
     <Compile Include="Models\SpecializationSubject.cs" />
     <Compile Include="Models\StaffDetails.cs" />

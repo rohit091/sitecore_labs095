@@ -1,0 +1,11 @@
+﻿@model  IEnumerable<Coforge.Project.Website.Models.ListingCard>
+
+<div>
+    @foreach (var listItem in Model)
+    {
+        <a href="@listItem.ListingCardUrl">
+            <div>@listItem.ListingCardTitle</div>
+        </a>
+        <div>@listItem.ListingCardDescription</div>
+    }
+</div>
