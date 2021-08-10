@@ -1,0 +1,14 @@
+﻿@model Coforge.Project.Website.Models.SearchTerm
+
+<div style="margin-left:10px">
+    @using (Html.BeginForm())
+    {
+        <!--SEARCH BOX-->
+        <!-- <div>Search:</div> -->
+        <div>@Html.TextBoxFor(x => x.SearchText, new {​​​ placeholder = "Search here.. ", @class = "form-input" }​​​)</div>
+
+        <!--SUBMIT Button-->
+        <div><input type="submit" value="Submit" /></div>
+        <br/>
+    }
+</div>
