@@ -466,6 +466,7 @@
     <Content Include="Views\TrnListing\Index.cshtml" />
     <Content Include="Views\TrnListingEntity\Index.cshtml" />
     <Content Include="Views\TrnHallOfFame\Index.cshtml" />
+    <Content Include="Views\TrnComments\Index.cshtml" />
     <None Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -475,11 +476,13 @@
     <Compile Include="Controllers\StudentDatabaseController.cs" />
     <Compile Include="Controllers\TrnArticleDetailController.cs" />
     <Compile Include="Controllers\TrnBreadcrumbController.cs" />
+    <Compile Include="Controllers\TrnCommentsController.cs" />
     <Compile Include="Controllers\TrnHallOfFameController.cs" />
     <Compile Include="Controllers\TrnListingController.cs" />
     <Compile Include="Controllers\TrnListingEntityController.cs" />
     <Compile Include="Models\ArticleDetail.cs" />
     <Compile Include="Models\AuthorDetails.cs" />
+    <Compile Include="Models\Comments.cs" />
     <Compile Include="Models\EntityCard.cs" />
     <Compile Include="Models\ListingCard.cs" />
     <Compile Include="Models\NavigationItem.cs" />

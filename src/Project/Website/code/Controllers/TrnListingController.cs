@@ -17,7 +17,16 @@ namespace Coforge.Project.Website.Controllers
             //ContextItem - currentContext
             var contextItem = Context.Item;
 
-
+            //Sitecore.Data.Items.Item = Sitecore.Context.Item
+            //GetChildren() - collection return type
+            //-------------------------------------------------
+            //Articles:
+            //Article1 Descritpion...
+            //Article2 Description...
+            //---------------------------
+            //returns childrens under a current Item context(Articles)
+            //use LINQ to iterate on collections using Select()
+            //convert childList(Complete information) -> List(display- Article only Name(url),descritpion)
             var listingCardItems = contextItem.GetChildren()
                    .Select(x => new ListingCard{
                        ListingCardTitle = x.Fields["ArticleTitle"].Value,

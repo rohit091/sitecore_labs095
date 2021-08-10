@@ -1,0 +1,14 @@
+﻿@model IEnumerable<Coforge.Project.Website.Models.Comments>
+
+<div>
+    @foreach (var commentItem in Model)
+    {
+        <div>
+            @commentItem.CommenterName <br/>
+            @commentItem.CommenterEmail <br/>
+            <p>
+                @commentItem.CommenterComments
+            </p>
+        </div>
+    }
+</div>

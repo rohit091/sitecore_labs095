@@ -20,6 +20,7 @@ namespace Coforge.Project.Website.Controllers
             //var contextItem = Context.Item;
             var contextItem = RenderingContext.Current.Rendering.Item;
 
+ 
             var entityCard = new EntityCard
             {
                 EntityName = contextItem.Fields["EntityName"].Value,
@@ -28,6 +29,7 @@ namespace Coforge.Project.Website.Controllers
             };
 
 
+            //SingleEntity Display
             return View(entityCard);
         }
     }
