@@ -1,0 +1,15 @@
+﻿@model Coforge.Project.Website.Models.Comments
+
+@using (Html.BeginForm())
+{
+    <div>Name: </div>
+    @*<div><input type="text" value="@Model.CommenterName" placeholder="Enter your name here...." /></div>*@
+    <div>@Html.TextBoxFor(x => x.CommenterName, new {​​​ placeholder = "Enter your name here.. ", @class = "form-input" }​​​)</div>
+
+    <div>Email Id: @Html.LabelFor(x => x.CommenterEmail)</div>
+    <div>@Html.TextBoxFor(x => x.CommenterEmail, new {​​​ placeholder = "Enter your email id here.. ", @class = "form-input" }​​​)</div>
+
+    <div>Comments: </div>
+    <div>@Html.TextBoxFor(x => x.CommenterComments, new {​​​ placeholder = "Enter your comments here.. ", @class = "form-input" }​​​)</div>
+    <div><input type="submit" value="Submit your comment" /></div>
+}
