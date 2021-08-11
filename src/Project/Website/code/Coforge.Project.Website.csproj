@@ -492,7 +492,9 @@
     <Compile Include="Models\EntityCard.cs" />
     <Compile Include="Models\ListingCard.cs" />
     <Compile Include="Models\NavigationItem.cs" />
+    <Compile Include="Models\SearchResult.cs" />
     <Compile Include="Models\SearchTerm.cs" />
+    <Compile Include="Models\SearchViewModel.cs" />
     <Compile Include="Models\SpecializationSubject.cs" />
     <Compile Include="Models\StaffDetails.cs" />
     <Compile Include="Models\StudentDatabase.cs" />

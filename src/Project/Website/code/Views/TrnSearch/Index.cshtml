@@ -1,14 +1,32 @@
-﻿@model Coforge.Project.Website.Models.SearchTerm
+﻿@model Coforge.Project.Website.Models.SearchViewModel
 
+<!-- WE NEED SEARCH RESULT MODEL also here -->
+<!-- We cannot import 2 models here in a single view -->
+<!-- Create new model - SearchViewModel = SearchTerm + SerchResult -->
+<!-- GET: SEARCH FORM-->
 <div style="margin-left:10px">
     @using (Html.BeginForm())
     {
         <!--SEARCH BOX-->
         <!-- <div>Search:</div> -->
-        <div>@Html.TextBoxFor(x => x.SearchText, new {​​​ placeholder = "Search here.. ", @class = "form-input" }​​​)</div>
+        <div>@Html.TextBoxFor(x => x.Term.SearchText, new {​​​ placeholder = "Search here.. ", @class = "form-input" }​​​)</div>
 
         <!--SUBMIT Button-->
-        <div><input type="submit" value="Submit" /></div>
-        <br/>
+        <div><input type="submit" value="Search" /></div>
+        <br />
+    }
+</div>
+
+
+<!-- POST: SEARCH RESULTS-->
+<div>
+    @if (Model != null) {
+        foreach (var listItem in Model.Results)
+        {
+            <div>
+                <div>@listItem.SearchResultTitle</div>
+                <div>@listItem.SearchResultDescription</div>
+            </div>
+        }
     }
 </div>
