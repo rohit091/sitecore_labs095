@@ -24,16 +24,16 @@ namespace Coforge.Project.Website.Controllers
 
             //=====  WAY1 ==========
             //contextItem
-            var contextItem = Context.Item;
-
-            //get current context fields
-            var authorInfoListStr = contextItem.Fields["AuthorInfo"].Value;
+            //var contextItem = Context.Item;
 
             //authors info List
-            List<AuthorInfo> authorsInfo = new List<AuthorInfo>();
+            //List<AuthorInfo> authorsInfo = new List<AuthorInfo>();
+
+            //get current context fields
+            //var authorInfoListStr = contextItem.Fields["AuthorInfo"].Value;
 
             //check if string is not empty
-            if (!string.IsNullOrEmpty(authorInfoListStr))
+            /*if (!string.IsNullOrEmpty(authorInfoListStr))
             {
                 //split() string -> array of id'
                 //list of author id's = array
@@ -52,7 +52,24 @@ namespace Coforge.Project.Website.Controllers
                     //Add to List
                     authorsInfo.Add(authorInfo);
                 }
-            }
+            }*/
+
+
+
+            //===== Way2 ========
+            //contextItem
+            var contextItem = Context.Item;
+
+            //authors info List
+            List<AuthorInfo> authorsInfo = new List<AuthorInfo>();
+
+            Sitecore.Data.Fields.MultilistField authorInfoList = contextItem.Fields["AuthorInfo"];
+            authorsInfo = authorInfoList.GetItems()
+                                        .Select(x => new AuthorInfo
+                                        {
+                                            AuthorInformation = x.Fields["EntityName"].Value
+                                        }).ToList() ;
+
 
             //authorsInfo to View
             return View(authorsInfo);
