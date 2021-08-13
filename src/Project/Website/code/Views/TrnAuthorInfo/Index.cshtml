@@ -1,0 +1,15 @@
+﻿@model List<Coforge.Project.Website.Models.AuthorInfo>
+
+<br />
+<!-- List of Items-->
+<div>
+    @foreach (var listItem in Model)
+    {
+        {
+            <div>
+                @listItem.AuthorInformation
+            </div>
+        }
+    }
+</div>
+<br /><br />
